@@ -1,0 +1,22 @@
+# ContextKit project configuration.
+# All keys are optional; the values shown are the defaults.
+
+[index]
+# Extra gitignore-style exclusion patterns. `.gitignore` and `.contextkitignore`
+# files are always respected.
+exclude = []
+max_file_bytes = 1048576
+follow_symlinks = false
+# Files that commonly hold secrets (.env, *.pem, id_rsa, ...) are never indexed
+# unless this is set to true.
+index_sensitive_files = false
+
+[retrieval]
+default_budget_tokens = 4000
+max_budget_tokens = 32000
+max_snippet_lines = 80
+
+[mcp]
+# Incrementally refresh the index before a tool call when the last refresh is
+# older than this many seconds. 0 disables automatic refresh.
+auto_refresh_secs = 30
